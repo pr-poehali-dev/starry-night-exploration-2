@@ -141,7 +141,7 @@ export const Hero3DWebGL = () => {
           <img
             src="https://cdn.poehali.dev/projects/2b4c61f6-a77c-4558-a316-a67c58970bb6/bucket/logos/medolov-logo.png"
             alt="Медолов"
-            className="h-32 md:h-48 xl:h-56 w-auto drop-shadow-2xl"
+            className="h-64 md:h-96 xl:h-[28rem] w-auto drop-shadow-2xl"
           />
         </div>
         <div className="text-xs md:text-xl xl:text-2xl 2xl:text-3xl mt-6 overflow-hidden text-white font-bold max-w-4xl mx-auto text-center px-4">
