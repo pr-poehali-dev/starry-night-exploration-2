@@ -2,7 +2,7 @@ import { Github, Twitter, Linkedin, Mail } from "lucide-react"
 
 export function Footer() {
   return (
-    <footer className="bg-black border-t border-red-500/20">
+    <footer className="bg-amber-950/60 border-t border-amber-700/40 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
@@ -89,7 +89,7 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-8 pt-8 border-t border-red-500/20">
+        <div className="mt-8 pt-8 border-t border-amber-700/30">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="font-space-mono text-gray-400 text-sm">2025 FamilyQuest. Все права защищены.</p>
             <div className="flex space-x-6 mt-4 md:mt-0">
