@@ -52,7 +52,7 @@ export function GameShowcaseSection() {
                   key={current}
                   src={slides[current].src}
                   alt={slides[current].alt}
-                  className="w-full h-[420px] object-cover transition-opacity duration-500"
+                  className="w-full object-contain transition-opacity duration-500"
                 />
                 {/* Caption */}
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent px-6 py-4">
