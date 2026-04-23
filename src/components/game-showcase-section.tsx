@@ -91,6 +91,35 @@ export function GameShowcaseSection() {
                   alt={slides[current].alt}
                   className="w-full object-contain transition-all duration-500"
                 />
+
+                {/* Animated bees overlay — only on slide 0 */}
+                {current === 0 && (
+                  <div className="absolute inset-0 pointer-events-none">
+                    {/* Bee 1 — левый нижний угол */}
+                    <div className="absolute bottom-16 left-6 bee-float flex flex-col items-center">
+                      <div className="bee-smile text-5xl select-none drop-shadow-lg">🐝</div>
+                      <div className="bee-wave text-2xl select-none -mt-1">👋</div>
+                    </div>
+
+                    {/* Bee 2 — правый нижний угол */}
+                    <div className="absolute bottom-12 right-8 bee-float-delay flex flex-col items-center">
+                      <div className="bee-smile text-4xl select-none drop-shadow-lg">🐝</div>
+                      <div className="bee-wave text-xl select-none -mt-1" style={{animationDelay: '0.3s'}}>👋</div>
+                    </div>
+
+                    {/* Bee 3 — маленькая, сверху справа */}
+                    <div className="absolute top-10 right-10 bee-float flex flex-col items-center" style={{animationDelay: '1s'}}>
+                      <div className="bee-smile text-3xl select-none drop-shadow-lg">🐝</div>
+                      <div className="bee-wave text-lg select-none -mt-1" style={{animationDelay: '0.6s'}}>👋</div>
+                    </div>
+
+                    {/* Speech bubble */}
+                    <div className="absolute top-6 left-6 bg-yellow-400 text-gray-900 text-xs font-bold px-3 py-1.5 rounded-full shadow-lg bee-smile">
+                      Привет! 🍯
+                    </div>
+                  </div>
+                )}
+
                 {/* Caption */}
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent px-6 py-4">
                   <p className="text-white text-sm font-medium">{slides[current].caption}</p>
