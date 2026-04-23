@@ -3,21 +3,21 @@ import { Button } from "@/components/ui/button"
 const shops = [
   {
     name: "OZON",
-    href: "#",
+    href: "https://ozon.ru/t/MtvobuI",
     bg: "bg-blue-600 hover:bg-blue-500",
     text: "text-white",
     emoji: "🔵",
   },
   {
     name: "ЯНДЕКС МАРКЕТ",
-    href: "#",
+    href: "https://market.yandex.ru/cc/9Hjz5D",
     bg: "bg-yellow-400 hover:bg-yellow-300",
     text: "text-gray-900",
     emoji: "🟡",
   },
   {
     name: "WILDBERRIES",
-    href: "#",
+    href: "https://www.wildberries.ru/catalog/463106961/detail.aspx?targetUrl=SN",
     bg: "bg-purple-600 hover:bg-purple-500",
     text: "text-white",
     emoji: "🟣",
