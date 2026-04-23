@@ -3,51 +3,51 @@ import { Badge } from "@/components/ui/badge"
 
 const features = [
   {
-    title: "Адаптивная нейрообработка",
-    description: "Самооптимизирующиеся алгоритмы, которые обучаются на нейронных паттернах и улучшают интерпретацию сигналов.",
-    icon: "brain",
-    badge: "ИИ",
+    title: "Для всей семьи",
+    description: "Продумана для игроков от 6 до 99 лет — простые правила, которые освоит каждый за 5 минут.",
+    icon: "family",
+    badge: "6+",
   },
   {
-    title: "Медицинская защита",
-    description: "Шифрование по стандартам FDA со сквозной защитой конфиденциальных нейронных данных.",
-    icon: "lock",
-    badge: "Сертификат",
+    title: "Командная игра",
+    description: "Никто не остаётся в стороне: все участвуют, помогают друг другу и радуются победе вместе.",
+    icon: "team",
+    badge: "Вместе",
   },
   {
-    title: "Интуитивное управление",
-    description: "Естественная трансляция мыслей в действия с откликом менее миллисекунды и точностью 99,7%.",
-    icon: "globe",
-    badge: "Точность",
+    title: "Весёлые задания",
+    description: "Более 300 уникальных карточек с вопросами, загадками и творческими заданиями на разные темы.",
+    icon: "cards",
+    badge: "300+ карт",
   },
   {
-    title: "Предиктивная калибровка",
-    description: "ML-модели, которые предугадывают намерения пользователя и оптимизируют нейронные пути.",
-    icon: "zap",
-    badge: "Умный",
+    title: "Живое общение",
+    description: "Никаких экранов! Игра возвращает семью за один стол и дарит по-настоящему тёплые вечера.",
+    icon: "talk",
+    badge: "Офлайн",
   },
   {
-    title: "Биометрическая интеграция",
-    description: "Бесшовная синхронизация с мониторингом жизненных показателей для контроля здоровья.",
-    icon: "link",
-    badge: "Связь",
+    title: "Реиграбельность",
+    description: "Каждая партия уникальна — разные карточки, разные ситуации, разные победители. Не надоедает!",
+    icon: "repeat",
+    badge: "Каждый раз ново",
   },
   {
-    title: "Поддержка XR",
-    description: "Нативная совместимость с AR/VR-средами для терапевтических и рабочих приложений.",
-    icon: "target",
-    badge: "XR Ready",
+    title: "Красивое издание",
+    description: "Плотные карточки, яркое оформление и удобная коробка — отличный подарок для любого случая.",
+    icon: "gift",
+    badge: "Подарок",
   },
 ]
 
 export function FeaturesSection() {
   return (
-    <section className="py-24 px-6 bg-background">
+    <section id="features" className="py-24 px-6 bg-background">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-foreground mb-4 font-sans">Возможности нового поколения</h2>
+          <h2 className="text-4xl font-bold text-foreground mb-4 font-sans">Почему семьи выбирают нас</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Почувствуйте будущее с технологиями, которые переопределяют возможное
+            Family Quest — это не просто игра, это повод собраться вместе и провести время по-настоящему
           </p>
         </div>
 
@@ -61,12 +61,12 @@ export function FeaturesSection() {
               <CardHeader>
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-3xl">
-                    {feature.icon === "brain" && "&#129504;"}
-                    {feature.icon === "lock" && "&#128274;"}
-                    {feature.icon === "globe" && "&#127760;"}
-                    {feature.icon === "zap" && "&#9889;"}
-                    {feature.icon === "link" && "&#128279;"}
-                    {feature.icon === "target" && "&#127919;"}
+                    {feature.icon === "family" && "👨‍👩‍👧‍👦"}
+                    {feature.icon === "team" && "🤝"}
+                    {feature.icon === "cards" && "🃏"}
+                    {feature.icon === "talk" && "💬"}
+                    {feature.icon === "repeat" && "🔄"}
+                    {feature.icon === "gift" && "🎁"}
                   </span>
                   <Badge variant="secondary" className="bg-accent text-accent-foreground">
                     {feature.badge}
