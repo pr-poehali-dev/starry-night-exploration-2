@@ -114,27 +114,15 @@ const Scene = () => {
 }
 
 export const Hero3DWebGL = () => {
-  const titleWords = "FAMILY QUEST".split(" ")
   const subtitle = "Настольная игра, которая объединяет всю семью."
-  const [visibleWords, setVisibleWords] = useState(0)
+  const [logoVisible, setLogoVisible] = useState(false)
   const [subtitleVisible, setSubtitleVisible] = useState(false)
-  const [delays, setDelays] = useState<number[]>([])
-  const [subtitleDelay, setSubtitleDelay] = useState(0)
 
   useEffect(() => {
-    setDelays(titleWords.map(() => Math.random() * 0.07))
-    setSubtitleDelay(Math.random() * 0.1)
-  }, [titleWords.length])
-
-  useEffect(() => {
-    if (visibleWords < titleWords.length) {
-      const timeout = setTimeout(() => setVisibleWords(visibleWords + 1), 600)
-      return () => clearTimeout(timeout)
-    } else {
-      const timeout = setTimeout(() => setSubtitleVisible(true), 800)
-      return () => clearTimeout(timeout)
-    }
-  }, [visibleWords, titleWords.length])
+    const t1 = setTimeout(() => setLogoVisible(true), 300)
+    const t2 = setTimeout(() => setSubtitleVisible(true), 1000)
+    return () => { clearTimeout(t1); clearTimeout(t2) }
+  }, [])
 
   return (
     <div className="h-screen bg-black relative overflow-hidden">
@@ -145,30 +133,21 @@ export const Hero3DWebGL = () => {
         <div className="absolute top-0 bottom-0 right-0 w-32 bg-gradient-to-l from-black to-transparent" />
       </div>
 
-      <div className="h-screen uppercase items-center w-full absolute z-[60] pointer-events-none px-10 flex justify-center flex-col">
-        <div className="text-3xl md:text-5xl xl:text-6xl 2xl:text-7xl font-extrabold font-orbitron">
-          <div className="flex space-x-2 lg:space-x-6 overflow-hidden text-white">
-            {titleWords.map((word, index) => (
-              <div
-                key={index}
-                className={index < visibleWords ? "fade-in" : ""}
-                style={{
-                  animationDelay: `${index * 0.13 + (delays[index] || 0)}s`,
-                  opacity: index < visibleWords ? undefined : 0,
-                }}
-              >
-                {word}
-              </div>
-            ))}
-          </div>
+      <div className="h-screen items-center w-full absolute z-[60] pointer-events-none px-10 flex justify-center flex-col">
+        <div
+          className={logoVisible ? "fade-in" : ""}
+          style={{ opacity: logoVisible ? undefined : 0 }}
+        >
+          <img
+            src="https://cdn.poehali.dev/projects/2b4c61f6-a77c-4558-a316-a67c58970bb6/bucket/logos/medolov-logo.png"
+            alt="Медолов"
+            className="h-32 md:h-48 xl:h-56 w-auto drop-shadow-2xl"
+          />
         </div>
-        <div className="text-xs md:text-xl xl:text-2xl 2xl:text-3xl mt-2 overflow-hidden text-white font-bold max-w-4xl mx-auto text-center px-4">
+        <div className="text-xs md:text-xl xl:text-2xl 2xl:text-3xl mt-6 overflow-hidden text-white font-bold max-w-4xl mx-auto text-center px-4">
           <div
             className={subtitleVisible ? "fade-in-subtitle" : ""}
-            style={{
-              animationDelay: `${titleWords.length * 0.13 + 0.2 + subtitleDelay}s`,
-              opacity: subtitleVisible ? undefined : 0,
-            }}
+            style={{ opacity: subtitleVisible ? undefined : 0 }}
           >
             {subtitle}
           </div>
